@@ -1,0 +1,10 @@
+services:
+  postgres:
+    container_name: postgres_container
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=sea_tecnologia'
+      - 'POSTGRES_PASSWORD=admin'
+      - 'POSTGRES_USER=admin'
+    ports:
+      - '5423:5432'
