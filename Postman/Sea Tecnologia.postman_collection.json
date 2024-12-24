@@ -1,7 +1,8 @@
 {
 	"info": {
-		"_postman_id": "4c6ffccc-99d7-4e8e-8144-4492c1cb8319",
+		"_postman_id": "4e604aac-7f61-40a3-8caf-afd8f983b085",
 		"name": "Sea Tecnologia",
+		"description": "Execução do Projeto --------------------------------------------------------------\n\n- Rode o projeto com o comando `mvn spring-boot:run` ou diretamente na IDE.\n    \n- Certifique-se de que os endpoints estejam acessíveis pela porta configurada no arquivo `application.properties` (por padrão, `localhost:8080/api`).\n    \n\nTestar os Endpoints ----------------------------------------------------------------\n\n- Faça primeiro o login no endpoint POST `/login` para obter o token de autenticação\n    \n- Adicione o token no cabeçalho das requisições (`Authorization: Bearer` )\n    \n\n**Acessar os Endpoints Disponíveis** -------------------------------------------------\n\n- User\n    \n- `POST /create-ADMIN` → Criar usuário administrador\n    \n- `GET /findById-USER/ADMIN` → Buscar usuário por ID\n    \n- `GET /findAll-ADMIN` → Listar todos os usuários.\n    \n- `GET /findAll-ADMIN` → Listar todos os usuários.\n    \n- `DELETE /delete-ADMIN` → Excluir usuário.\n    \n- Products\n    \n- `POST /create-ADMIN` → Criar produto.\n    \n- `GET /findById-USER/ADMIN` → Buscar produto por ID.\n    \n- `GET /findAll-USER/ADMIN` → Listar todos os produtos.\n    \n- `PUT /update-ADMIN` → Atualizar produto.\n    \n- `DELETE /delete-ADMIN` → Excluir produto.\n    \n\nAmbiente de Desenvolvimento -----------------------------------------------------\n\n- Certifique-se de configurar corretamente as variáveis de ambiente (host, username, password, etc.) e de rodar o banco de dados antes de iniciar o projeto.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "33185305"
 	},
@@ -77,7 +78,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"description": "Criar Usuários para Login\n\n- Para acessar os endpoints, é necessário autenticar com um dos usuários pré-definidos abaixo:\n    \n\n**Administrador**:\n\n- **Username**: `00000000000`\n    \n- **Password**: `123qwe!@#`\n    \n\n**Usuário Comum**:\n\n- **Username**: `11111111111`\n    \n- **Password**: `123qwe123`\n    \n\n#### Pode mudar Variables e ja fazer login, nao esquecer de importar o arquivo Environments\n\n<img src=\"https://content.pstmn.io/8df29e24-ae02-448d-8bd4-7dc72a2e85f2/aW1hZ2UucG5n\" alt=\"\" height=\"509\" width=\"421\">"
 		},
 		{
 			"name": "Endpoints",
@@ -241,7 +243,8 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"description": "Execução do Projeto --------------------------------------------------------------\n\n- Rode o projeto com o comando `mvn spring-boot:run` ou diretamente na IDE.\n    \n- Certifique-se de que os endpoints estejam acessíveis pela porta configurada no arquivo `application.properties` (por padrão, `localhost:8080/api`).\n    \n\nTestar os Endpoints ----------------------------------------------------------------\n\n- Faça primeiro o login no endpoint POST `/login` para obter o token de autenticação\n    \n- Adicione o token no cabeçalho das requisições (`Authorization: Bearer` )\n    \n\n**Acessar os Endpoints Disponíveis** -------------------------------------------------\n\n- User\n    \n- `POST /create-ADMIN` → Criar usuário administrador\n    \n- `GET /findById-USER/ADMIN` → Buscar usuário por ID\n    \n- `GET /findAll-ADMIN` → Listar todos os usuários.\n    \n- `GET /findAll-ADMIN` → Listar todos os usuários.\n    \n- `DELETE /delete-ADMIN` → Excluir usuário.\n    \n- Products\n    \n- `POST /create-ADMIN` → Criar produto.\n    \n- `GET /findById-USER/ADMIN` → Buscar produto por ID.\n    \n- `GET /findAll-USER/ADMIN` → Listar todos os produtos.\n    \n- `PUT /update-ADMIN` → Atualizar produto.\n    \n- `DELETE /delete-ADMIN` → Excluir produto.\n    \n\nAmbiente de Desenvolvimento -----------------------------------------------------\n\n- Certifique-se de configurar corretamente as variáveis de ambiente (host, username, password, etc.) e de rodar o banco de dados antes de iniciar o projeto."
 				},
 				{
 					"name": "Products",
@@ -402,9 +405,11 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"description": "Execução do Projeto --------------------------------------------------------------\n\n- Rode o projeto com o comando `mvn spring-boot:run` ou diretamente na IDE.\n    \n- Certifique-se de que os endpoints estejam acessíveis pela porta configurada no arquivo `application.properties` (por padrão, `localhost:8080/api`).\n    \n\nTestar os Endpoints ----------------------------------------------------------------\n\n- Faça primeiro o login no endpoint POST `/login` para obter o token de autenticação\n    \n- Adicione o token no cabeçalho das requisições (`Authorization: Bearer` )\n    \n\n**Acessar os Endpoints Disponíveis** -------------------------------------------------\n\n- User\n    \n- `POST /create-ADMIN` → Criar usuário administrador\n    \n- `GET /findById-USER/ADMIN` → Buscar usuário por ID\n    \n- `GET /findAll-ADMIN` → Listar todos os usuários.\n    \n- `GET /findAll-ADMIN` → Listar todos os usuários.\n    \n- `DELETE /delete-ADMIN` → Excluir usuário.\n    \n- Products\n    \n- `POST /create-ADMIN` → Criar produto.\n    \n- `GET /findById-USER/ADMIN` → Buscar produto por ID.\n    \n- `GET /findAll-USER/ADMIN` → Listar todos os produtos.\n    \n- `PUT /update-ADMIN` → Atualizar produto.\n    \n- `DELETE /delete-ADMIN` → Excluir produto.\n    \n\nAmbiente de Desenvolvimento -----------------------------------------------------\n\n- Certifique-se de configurar corretamente as variáveis de ambiente (host, username, password, etc.) e de rodar o banco de dados antes de iniciar o projeto."
 				}
-			]
+			],
+			"description": "Execução do Projeto --------------------------------------------------------------\n\n- Rode o projeto com o comando `mvn spring-boot:run` ou diretamente na IDE.\n    \n- Certifique-se de que os endpoints estejam acessíveis pela porta configurada no arquivo `application.properties` (por padrão, `localhost:8080/api`).\n    \n\nTestar os Endpoints ----------------------------------------------------------------\n\n- Faça primeiro o login no endpoint POST `/login` para obter o token de autenticação\n    \n- Adicione o token no cabeçalho das requisições (`Authorization: Bearer` )\n    \n\n**Acessar os Endpoints Disponíveis** -------------------------------------------------\n\n- User\n    \n- `POST /create-ADMIN` → Criar usuário administrador\n    \n- `GET /findById-USER/ADMIN` → Buscar usuário por ID\n    \n- `GET /findAll-ADMIN` → Listar todos os usuários.\n    \n- `GET /findAll-ADMIN` → Listar todos os usuários.\n    \n- `DELETE /delete-ADMIN` → Excluir usuário.\n    \n- Products\n    \n- `POST /create-ADMIN` → Criar produto.\n    \n- `GET /findById-USER/ADMIN` → Buscar produto por ID.\n    \n- `GET /findAll-USER/ADMIN` → Listar todos os produtos.\n    \n- `PUT /update-ADMIN` → Atualizar produto.\n    \n- `DELETE /delete-ADMIN` → Excluir produto.\n    \n\nAmbiente de Desenvolvimento -----------------------------------------------------\n\n- Certifique-se de configurar corretamente as variáveis de ambiente (host, username, password, etc.) e de rodar o banco de dados antes de iniciar o projeto."
 		}
 	]
 }
