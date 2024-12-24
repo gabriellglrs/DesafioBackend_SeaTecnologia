@@ -1,29 +1,31 @@
-package br.com.sea.tecnologia.desafioBackend.entities;
+package br.com.sea.tecnologia.desafioBackend.domain.user.entities;
 
+import br.com.sea.tecnologia.desafioBackend.domain.user.enums.PhoneType;
 import jakarta.persistence.*;
 
 import java.util.Objects;
 
-
 @Entity
-@Table(name = "tb_email")
-public class Emaill {
+@Table(name = "tb_phone")
+public class Phone {
      @Id
      @GeneratedValue(strategy = GenerationType.IDENTITY)
      private Long id;
 
-     private String email;
+     private String numero;
+     private PhoneType phoneType;
 
      @ManyToOne
      @JoinColumn(name = "client_id")
      private User client;
 
-     public Emaill() {
+     public Phone() {
      }
 
-     public Emaill(Long id, String email, User client) {
+     public Phone(Long id, String numero, PhoneType phoneType, User client) {
           this.id = id;
-          this.email = email;
+          this.numero = numero;
+          this.phoneType = phoneType;
           this.client = client;
      }
 
@@ -35,12 +37,20 @@ public class Emaill {
           this.id = id;
      }
 
-     public String getEmail() {
-          return email;
+     public String getNumero() {
+          return numero;
      }
 
-     public void setEmail(String email) {
-          this.email = email;
+     public void setNumero(String numero) {
+          this.numero = numero;
+     }
+
+     public PhoneType getPhoneType() {
+          return phoneType;
+     }
+
+     public void setPhoneType(PhoneType phoneType) {
+          this.phoneType = phoneType;
      }
 
      public User getClient() {
@@ -54,8 +64,8 @@ public class Emaill {
      @Override
      public boolean equals(Object o) {
           if (o == null || getClass() != o.getClass()) return false;
-          Emaill emaill = (Emaill) o;
-          return Objects.equals(id, emaill.id);
+          Phone phone = (Phone) o;
+          return Objects.equals(id, phone.id);
      }
 
      @Override

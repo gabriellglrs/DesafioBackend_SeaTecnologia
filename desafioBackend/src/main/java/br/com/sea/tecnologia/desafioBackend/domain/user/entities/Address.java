@@ -1,4 +1,4 @@
-package br.com.sea.tecnologia.desafioBackend.entities;
+package br.com.sea.tecnologia.desafioBackend.domain.user.entities;
 
 import jakarta.persistence.*;
 

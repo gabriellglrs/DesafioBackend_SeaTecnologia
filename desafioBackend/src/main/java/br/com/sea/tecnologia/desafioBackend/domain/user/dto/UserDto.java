@@ -1,7 +1,6 @@
-package br.com.sea.tecnologia.desafioBackend.dto;
+package br.com.sea.tecnologia.desafioBackend.domain.user.dto;
 
-import br.com.sea.tecnologia.desafioBackend.entities.Role;
-import br.com.sea.tecnologia.desafioBackend.entities.User;
+import br.com.sea.tecnologia.desafioBackend.domain.user.entities.User;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -45,14 +44,6 @@ public class UserDto {
      public UserDto() {
      }
 
-     public UserDto(Long id, String nome, String cpf, String password, AddressDto address) {
-          this.id = id;
-          this.nome = nome;
-          this.cpf = cpf;
-          this.password = password;
-          this.address = address;
-     }
-
      public UserDto(User user) {
           id = user.getId();
           nome = user.getNome();
@@ -83,6 +74,10 @@ public class UserDto {
 
      public String getPassword() {
           return password;
+     }
+
+     public void setPassword(String password) {
+          this.password = password;
      }
 
      public AddressDto getAddress() {

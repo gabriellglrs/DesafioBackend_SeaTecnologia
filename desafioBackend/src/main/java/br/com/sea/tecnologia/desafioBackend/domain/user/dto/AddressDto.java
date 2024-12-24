@@ -1,6 +1,6 @@
-package br.com.sea.tecnologia.desafioBackend.dto;
+package br.com.sea.tecnologia.desafioBackend.domain.user.dto;
 
-import br.com.sea.tecnologia.desafioBackend.entities.User;
+import br.com.sea.tecnologia.desafioBackend.domain.user.entities.User;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
@@ -76,6 +76,34 @@ public class AddressDto {
 
      public String getComplemento() {
           return complemento;
+     }
+
+     public void setId(Long id) {
+          this.id = id;
+     }
+
+     public void setCep(String cep) {
+          this.cep = cep;
+     }
+
+     public void setLogradouro(String logradouro) {
+          this.logradouro = logradouro;
+     }
+
+     public void setBairro(String bairro) {
+          this.bairro = bairro;
+     }
+
+     public void setCidade(String cidade) {
+          this.cidade = cidade;
+     }
+
+     public void setUf(String uf) {
+          this.uf = uf;
+     }
+
+     public void setComplemento(String complemento) {
+          this.complemento = complemento;
      }
 }
 

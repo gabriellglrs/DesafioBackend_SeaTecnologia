@@ -1,6 +1,6 @@
-package br.com.sea.tecnologia.desafioBackend.dto;
+package br.com.sea.tecnologia.desafioBackend.domain.user.dto;
 
-import br.com.sea.tecnologia.desafioBackend.entities.Emaill;
+import br.com.sea.tecnologia.desafioBackend.domain.user.entities.Emaill;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
@@ -12,11 +12,6 @@ public class EmailDto {
      private String email;
 
      public EmailDto() {
-     }
-
-     public EmailDto(String email, Long id) {
-          this.email = email;
-          this.id = id;
      }
 
      public EmailDto(Emaill emaill) {

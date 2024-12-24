@@ -1,7 +1,7 @@
-package br.com.sea.tecnologia.desafioBackend.dto;
+package br.com.sea.tecnologia.desafioBackend.domain.user.dto;
 
-import br.com.sea.tecnologia.desafioBackend.entities.Role;
-import br.com.sea.tecnologia.desafioBackend.enums.RoleType;
+import br.com.sea.tecnologia.desafioBackend.domain.user.entities.Role;
+import br.com.sea.tecnologia.desafioBackend.domain.user.enums.RoleType;
 
 public class RoleDto {
      private Long id;
@@ -12,7 +12,7 @@ public class RoleDto {
 
      public RoleDto(Role role) {
           id = role.getId();
-          authority = role.getAuthority();
+          this.authority = role.getAuthority() != null ? RoleType.valueOf(role.getAuthority()) : null;
      }
 
      public Long getId() {
