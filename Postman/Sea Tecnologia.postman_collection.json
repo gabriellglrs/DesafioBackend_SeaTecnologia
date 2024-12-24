@@ -1,0 +1,410 @@
+{
+	"info": {
+		"_postman_id": "4c6ffccc-99d7-4e8e-8144-4492c1cb8319",
+		"name": "Sea Tecnologia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33185305"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if (responseCode.code >= 200 && responseCode.code < 300) {\r",
+									"    var json = JSON.parse(responseBody);\r",
+									"    postman.setEnvironmentVariable('token', json.access_token);\r",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{client-secret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{client-id}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "{{grant-type}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/oauth2/token",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"oauth2",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Endpoints",
+			"item": [
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "create-ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"Lucas\",\r\n    \"cpf\": \"15013140684\",\r\n    \"password\": \"Azul@#$2003\",\r\n    \"address\": {\r\n        \"cep\": \"71692-448\",\r\n        \"logradouro\": \"Rua Exemplo\",\r\n        \"bairro\": \"Centro\",\r\n        \"cidade\": \"São Paulo\",\r\n        \"uf\": \"SP\",\r\n        \"complemento\": \"Apto 101\"\r\n    },\r\n    \"phones\": [\r\n        {\r\n            \"numero\": \"12343278244\",\r\n            \"phoneType\": \"CELULAR\"\r\n        }\r\n    ],\r\n    \"emails\": [\r\n        {\r\n            \"email\": \"reserva@gmail.com\"\r\n        },\r\n        {\r\n            \"email\": \"raaaaaaaa@gmail.com\"\r\n        }\r\n    ],\r\n    \"roles\": [\r\n        {\r\n            \"id\": 2\r\n        }\r\n        \r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/users",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findById-USER/ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/users/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findAll - ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/users",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update - ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"Lucas\",\r\n    \"cpf\": \"15013140684\",\r\n    \"password\": \"Azul@#$2003\",\r\n    \"address\": {\r\n        \"cep\": \"71692-448\",\r\n        \"logradouro\": \"Rua Exemplo\",\r\n        \"bairro\": \"Centro\",\r\n        \"cidade\": \"São Paulo\",\r\n        \"uf\": \"SP\",\r\n        \"complemento\": \"Apto 101\"\r\n    },\r\n    \"phones\": [\r\n        {\r\n            \"numero\": \"12343278244\",\r\n            \"phoneType\": \"CELULAR\"\r\n        }\r\n    ],\r\n    \"emails\": [\r\n        {\r\n            \"email\": \"reserva@gmail.com\"\r\n        },\r\n        {\r\n            \"email\": \"raaaaaaaa@gmail.com\"\r\n        }\r\n    ],\r\n    \"roles\": [\r\n        {\r\n            \"id\": 2\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/users/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete - ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/users/4",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"users",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Products",
+					"item": [
+						{
+							"name": "create-ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Smartphone Samsung Galaxy A54\",\r\n    \"description\": \"Smartphone com tela Super AMOLED 6.4\\\", 128GB de armazenamento, 8GB RAM, câmera tripla 50MP\",\r\n    \"price\": 1799.9\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/products",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findById-USER/ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/products/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"products",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findAll-USER/ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/products",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update - ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Sm\",\r\n    \"description\": \"Smartphone com tela Super AMOLED 6.4\\\", 128GB de armazenamento, 8GB RAM, câmera tripla 50MP\",\r\n    \"price\": 1799.9\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/products/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"products",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete - ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/products/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"products",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
