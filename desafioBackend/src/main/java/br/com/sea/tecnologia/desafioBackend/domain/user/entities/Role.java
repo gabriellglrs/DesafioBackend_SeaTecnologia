@@ -51,15 +51,4 @@ public class Role implements GrantedAuthority {
           return authority.name();
      }
 
-     @Override
-     public boolean equals(Object o) {
-          if (o == null || getClass() != o.getClass()) return false;
-          Role role = (Role) o;
-          return Objects.equals(id, role.id) && authority == role.authority;
-     }
-
-     @Override
-     public int hashCode() {
-          return Objects.hash(id, authority);
-     }
 }

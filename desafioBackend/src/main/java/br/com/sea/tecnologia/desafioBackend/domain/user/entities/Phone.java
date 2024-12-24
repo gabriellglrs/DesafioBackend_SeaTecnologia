@@ -65,11 +65,11 @@ public class Phone {
      public boolean equals(Object o) {
           if (o == null || getClass() != o.getClass()) return false;
           Phone phone = (Phone) o;
-          return Objects.equals(id, phone.id);
+          return Objects.equals(numero, phone.numero);
      }
 
      @Override
      public int hashCode() {
-          return Objects.hashCode(id);
+          return Objects.hashCode(numero);
      }
 }

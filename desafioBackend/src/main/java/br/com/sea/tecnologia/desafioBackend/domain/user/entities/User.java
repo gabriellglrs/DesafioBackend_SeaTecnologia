@@ -160,11 +160,11 @@ public class User implements UserDetails {
      public boolean equals(Object o) {
           if (o == null || getClass() != o.getClass()) return false;
           User user = (User) o;
-          return Objects.equals(id, user.id);
+          return Objects.equals(cpf, user.cpf) && Objects.equals(password, user.password);
      }
 
      @Override
      public int hashCode() {
-          return Objects.hashCode(id);
+          return Objects.hash(cpf, password);
      }
 }

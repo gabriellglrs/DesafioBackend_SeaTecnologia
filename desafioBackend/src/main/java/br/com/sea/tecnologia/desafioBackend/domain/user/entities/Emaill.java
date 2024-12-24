@@ -55,11 +55,11 @@ public class Emaill {
      public boolean equals(Object o) {
           if (o == null || getClass() != o.getClass()) return false;
           Emaill emaill = (Emaill) o;
-          return Objects.equals(id, emaill.id);
+          return Objects.equals(email, emaill.email);
      }
 
      @Override
      public int hashCode() {
-          return Objects.hashCode(id);
+          return Objects.hashCode(email);
      }
 }
