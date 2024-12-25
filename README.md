@@ -1,6 +1,6 @@
-<img src="./img/banner.png" alt=""/> <br><br>
+<img src="./IMG/banner.png" alt=""/> <br><br>
 
-<img src="./img/img.png" alt=""/> <br>
+<img src="./IMG/img.png" alt=""/> <br>
 
 ## API Desafio Backend SEA TECNOLOGIA
 API com Segurança Customizada, protegida com OAuth2, JWT e Spring Security.
