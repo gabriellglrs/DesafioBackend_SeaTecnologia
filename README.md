@@ -23,15 +23,15 @@ Este projeto é uma API RESTful segura para gerenciamento de usuários e produto
   <img width="50" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" height="50" alt="spring logo"  />
   <img width="50" />
-  <img src="img/springsecurity.svg" height="50" alt="postgresql logo"  />
+  <img src="IMG/springsecurity.svg" height="50" alt="postgresql logo"  />
   <img width="50" />
-   <img src="img/oauth-original.svg" height="60" alt="postgresql logo" />
+   <img src="IMG/oauth-original.svg" height="60" alt="postgresql logo" />
   <img width="50" />
-  <img src="img/jwt-3.svg" height="50" alt="postgresql logo"  />
+  <img src="IMG/jwt-3.svg" height="50" alt="postgresql logo"  />
   <img width="50" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="50" alt="postgresql logo"  />
   <img width="50" />
- <img src="img/swagger-original.svg" height="50" alt="postgresql logo"  />
+ <img src="IMG/swagger-original.svg" height="50" alt="postgresql logo"  />
   <img width="50" />
    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg" height="60" alt="postgresql logo" />
 </div>
@@ -81,7 +81,7 @@ API manipula diversas exceções:
 
 ## Postman 
 <div align="center">
-    <img src="img/postman-original.svg" height="60" alt="postgresql logo" /> 
+    <img src="IMG/postman-original.svg" height="60" alt="postgresql logo" /> 
 </div>
 
 Faca a importação dos arquivos que encontra na pasta postman para o aplicativo postman
