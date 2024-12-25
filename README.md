@@ -86,6 +86,7 @@ API manipula diversas exceções:
     <img src="IMG/postman-original.svg" height="60" alt="postgresql logo" /> 
 </div>
 <br>
+
 Faca a importação dos arquivos que encontra na pasta postman para o aplicativo postman
 1. **Execução do Projeto**
    - Rode o projeto com o comando mvn spring-boot:run ou diretamente na IDE.
