@@ -37,7 +37,7 @@ public class ProductController {
 
      @PreAuthorize("hasRole('ROLE_ADMIN')")
      @PostMapping
-     @Operation(summary = "Criar produto", description = "Permite criar um novo produto. Requer o papel ROLE_ADMIN.")
+     @Operation(summary = "Criar produto - ADMIN", description = "Permite criar um novo produto. Requer o papel ROLE_ADMIN.")
      @ApiResponses({
              @ApiResponse(responseCode = "201", description = "Produto criado com sucesso",
                      content = @Content(mediaType = "application/json",
@@ -57,7 +57,7 @@ public class ProductController {
 
      @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_USER')")
      @GetMapping(value = "/{id}")
-     @Operation(summary = "Buscar produto por ID", description = "Retorna os detalhes de um produto com base no ID. Acesso permitido para ADMIN ou USER.")
+     @Operation(summary = "Buscar produto por ID - USER/ADMIN", description = "Retorna os detalhes de um produto com base no ID. Acesso permitido para ADMIN ou USER.")
      @ApiResponses({
              @ApiResponse(responseCode = "200", description = "Produto encontrado",
                      content = @Content(mediaType = "application/json",
@@ -71,7 +71,7 @@ public class ProductController {
 
      @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_USER')")
      @GetMapping
-     @Operation(summary = "Listar todos os produtos", description = "Retorna uma página com todos os produtos cadastrados. Acesso permitido para ADMIN ou USER.")
+     @Operation(summary = "Listar todos os produtos - USER/ADMIN", description = "Retorna uma página com todos os produtos cadastrados. Acesso permitido para ADMIN ou USER.")
      @ApiResponses({
              @ApiResponse(responseCode = "200", description = "Lista de produtos retornada",
                      content = @Content(mediaType = "application/json",
@@ -84,7 +84,7 @@ public class ProductController {
 
      @PreAuthorize("hasRole('ROLE_ADMIN')")
      @PutMapping(value = "/{id}")
-     @Operation(summary = "Atualizar produto", description = "Atualiza as informações de um produto com base no ID. Requer o papel ROLE_ADMIN.")
+     @Operation(summary = "Atualizar produto - ADMIN", description = "Atualiza as informações de um produto com base no ID. Requer o papel ROLE_ADMIN.")
      @ApiResponses({
              @ApiResponse(responseCode = "200", description = "Produto atualizado com sucesso",
                      content = @Content(mediaType = "application/json",
@@ -98,7 +98,7 @@ public class ProductController {
 
      @PreAuthorize("hasRole('ROLE_ADMIN')")
      @DeleteMapping(value = "/{id}")
-     @Operation(summary = "Excluir produto", description = "Exclui um produto com base no ID. Requer o papel ROLE_ADMIN.")
+     @Operation(summary = "Excluir produto - ADMIN", description = "Exclui um produto com base no ID. Requer o papel ROLE_ADMIN.")
      @ApiResponses({
              @ApiResponse(responseCode = "200", description = "Produto excluído com sucesso",
                      content = @Content(mediaType = "application/json")),

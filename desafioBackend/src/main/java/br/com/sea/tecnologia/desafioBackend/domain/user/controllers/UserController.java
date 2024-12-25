@@ -36,7 +36,7 @@ public class UserController {
 
      @PreAuthorize("hasRole('ROLE_ADMIN')")
      @PostMapping
-     @Operation(summary = "Criar usuário", description = "Permite criar um novo usuário. Requer o papel ROLE_ADMIN.")
+     @Operation(summary = "Criar usuário - ADMIN", description = "Permite criar um novo usuário. Requer o papel ROLE_ADMIN.")
      @ApiResponses({
              @ApiResponse(responseCode = "201", description = "Usuário criado com sucesso",
                      content = @Content(mediaType = "application/json",
@@ -56,7 +56,7 @@ public class UserController {
 
      @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_USER')")
      @GetMapping(value = "/{id}")
-     @Operation(summary = "Buscar usuário por ID", description = "Retorna os detalhes de um usuário com base no ID. Acesso permitido para ADMIN ou USER.")
+     @Operation(summary = "Buscar usuário por ID - USER/ADMIN", description = "Retorna os detalhes de um usuário com base no ID. Acesso permitido para ADMIN ou USER.")
      @ApiResponses({
              @ApiResponse(responseCode = "200", description = "Usuário encontrado",
                      content = @Content(mediaType = "application/json",
@@ -70,7 +70,7 @@ public class UserController {
 
      @PreAuthorize("hasRole('ROLE_ADMIN')")
      @GetMapping
-     @Operation(summary = "Listar todos os usuários", description = "Retorna uma página com os usuários cadastrados. Requer o papel ROLE_ADMIN.")
+     @Operation(summary = "Listar todos os usuários - ADMIN", description = "Retorna uma página com os usuários cadastrados. Requer o papel ROLE_ADMIN.")
      @ApiResponses({
              @ApiResponse(responseCode = "200", description = "Lista de usuários retornada",
                      content = @Content(mediaType = "application/json",
@@ -83,7 +83,7 @@ public class UserController {
 
      @PreAuthorize("hasRole('ROLE_ADMIN')")
      @PutMapping(value = "/{id}")
-     @Operation(summary = "Atualizar usuário", description = "Atualiza as informações de um usuário com base no ID. Requer o papel ROLE_ADMIN.")
+     @Operation(summary = "Atualizar usuário - ADMIN", description = "Atualiza as informações de um usuário com base no ID. Requer o papel ROLE_ADMIN.")
      @ApiResponses({
              @ApiResponse(responseCode = "200", description = "Usuário atualizado com sucesso",
                      content = @Content(mediaType = "application/json",
@@ -97,7 +97,7 @@ public class UserController {
 
      @PreAuthorize("hasRole('ROLE_ADMIN')")
      @DeleteMapping(value = "/{id}")
-     @Operation(summary = "Excluir usuário", description = "Exclui um usuário com base no ID. Requer o papel ROLE_ADMIN.")
+     @Operation(summary = "Excluir usuário - ADMIN", description = "Exclui um usuário com base no ID. Requer o papel ROLE_ADMIN.")
      @ApiResponses({
              @ApiResponse(responseCode = "200", description = "Usuário excluído com sucesso",
                      content = @Content(mediaType = "application/json")),
