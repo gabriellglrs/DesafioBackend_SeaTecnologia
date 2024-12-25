@@ -144,7 +144,7 @@ Faca a importação dos arquivos que encontra na pasta postman para o aplicativo
 1. Clone o repositório:
 
    ```bash
-    git clone https://github.com/seu-usuario/nome-do-repositorio.git
+    git clone git@github.com:gabriellglrs/DesafioBackend_SeaTecnologia.git
    ````
 2. Acesse o diretório do projeto:
    ```bash
