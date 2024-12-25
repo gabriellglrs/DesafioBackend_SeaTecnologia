@@ -31,8 +31,6 @@ Este projeto é uma API RESTful segura para gerenciamento de usuários e produto
   <img width="50" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="50" alt="postgresql logo"  />
   <img width="50" />
- <img src="IMG/swagger-original.svg" height="50" alt="postgresql logo"  />
-  <img width="50" />
    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg" height="60" alt="postgresql logo" />
 </div>
 <br>
@@ -56,6 +54,10 @@ API implementa um modelo de segurança robusto:
 - Mascaramento de dados confidenciais em respostas
 
 ## Documentação da API
+<div align="center">
+    <img src="IMG/swagger-original.svg" height="60" alt="postgresql logo" /> 
+</div>
+<br>
 A API é documentada usando Swagger/OpenAPI. 
 - http://localhost:8080/api/swagger-ui.html
 
@@ -83,7 +85,7 @@ API manipula diversas exceções:
 <div align="center">
     <img src="IMG/postman-original.svg" height="60" alt="postgresql logo" /> 
 </div>
-
+<br>
 Faca a importação dos arquivos que encontra na pasta postman para o aplicativo postman
 1. **Execução do Projeto**
    - Rode o projeto com o comando mvn spring-boot:run ou diretamente na IDE.
