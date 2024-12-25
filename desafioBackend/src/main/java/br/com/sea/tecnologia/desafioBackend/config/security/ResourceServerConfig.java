@@ -22,20 +22,26 @@ import org.springframework.web.filter.CorsFilter;
 @EnableWebSecurity
 @EnableMethodSecurity
 public class ResourceServerConfig {
-
 	@Value("${cors.origins}")
 	private String corsOrigins;
-
-
 
 	@Bean
 	@Order(3)
 	public SecurityFilterChain rsSecurityFilterChain(HttpSecurity http) throws Exception {
 
-		http.csrf(csrf -> csrf.disable());
-		http.authorizeHttpRequests(authorize -> authorize.anyRequest().permitAll());
-		http.oauth2ResourceServer(oauth2ResourceServer -> oauth2ResourceServer.jwt(Customizer.withDefaults()));
-		http.cors(cors -> cors.configurationSource(corsConfigurationSource()));
+		http.csrf(csrf -> csrf.disable()); // Desativa CSRF (opcional, dependendo do contexto)
+		http.cors(cors -> cors.configurationSource(corsConfigurationSource())); // Configura CORS
+
+		http.authorizeHttpRequests(authorize -> authorize
+			// Permite acesso ao Swagger sem autenticação
+			.requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
+			// Exige autenticação para qualquer outra rota
+			.anyRequest().authenticated()
+		);
+
+		http.oauth2ResourceServer(oauth2ResourceServer ->
+			oauth2ResourceServer.jwt(Customizer.withDefaults())); // Configura OAuth2 com JWT
+
 		return http.build();
 	}
 

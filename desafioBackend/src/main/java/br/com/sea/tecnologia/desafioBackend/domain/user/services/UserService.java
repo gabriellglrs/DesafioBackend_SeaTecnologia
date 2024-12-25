@@ -77,6 +77,7 @@ public class UserService implements UserDetailsService {
      public UserDto update(Long id, UserDto dto) {
           User user = userRepository.findById(id)
                   .orElseThrow(() -> new ResourceNotFoundException("Usuário não encontrado com o ID: " + id));
+          validateCpfDto(dto);
           updateUserFromDto(user, dto);
           user = userRepository.save(user);
           return new UserDto(user);

@@ -1,4 +1,4 @@
-package br.com.sea.tecnologia.desafioBackend.util;
+package br.com.sea.tecnologia.desafioBackend.exceptions.handler.error;
 
 import br.com.sea.tecnologia.desafioBackend.domain.user.enums.PhoneType;
 import com.fasterxml.jackson.core.JsonParser;
@@ -8,7 +8,7 @@ import com.fasterxml.jackson.databind.JsonDeserializer;
 import java.io.IOException;
 import java.util.Arrays;
 
-public class PhoneTypeDeserializer extends JsonDeserializer<PhoneType> {
+public class PhoneTypeDeserializerError extends JsonDeserializer<PhoneType> {
 
      @Override
      public PhoneType deserialize(JsonParser p, DeserializationContext ctxt) throws IOException {
