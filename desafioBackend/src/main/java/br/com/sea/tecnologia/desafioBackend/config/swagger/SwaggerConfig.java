@@ -28,7 +28,8 @@ public class SwaggerConfig {
                                        + "**Usuário Comum**:\n"
                                        + "Username: 11111111111\n"
                                        + "Password: 123qwe123\n\n"
-                                       + "_Não se esqueça de fazer o login pelo Postman para obter o token de acesso._"))
+                                       + "_Não se esqueça de fazer o login pelo Postman para obter o token de acesso._\n\n"
+                                       + "Link do Postman com Endpoints e Variaveis para importar: [Postman_arquivos](https://github.com/gabriellglrs/DesafioBackend_SeaTecnologia/tree/main/Postman)"))
                   .addSecurityItem(new SecurityRequirement().addList(securitySchemeName))
                   .components(new Components()
                           .addSecuritySchemes(securitySchemeName,
