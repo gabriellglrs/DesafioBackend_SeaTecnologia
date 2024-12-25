@@ -157,5 +157,5 @@ Faca a importação dos arquivos que encontra na pasta postman para o aplicativo
     - A aplicação estará disponível em http://localhost:8080/api.
    
 ## Autor
-**Desenvolvido por Gabriel Lucas Rodrigues Souza** como parte do curso Formação Desenvolvedor Moderno da DevSuperior.
+**Desenvolvido por Gabriel Lucas Rodrigues Souza**.
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=4C89F8&height=120&section=footer"/>
