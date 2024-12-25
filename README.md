@@ -1,2 +1,1 @@
-# DesafioBackend_SeaTecnologia
- Desafio Backend Spring Boot - Sea Tecnologia
+<img src="./img/LinkedIn cover - 22.PNG" alt=""/> <br><br>
