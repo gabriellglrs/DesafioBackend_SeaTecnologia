@@ -2,9 +2,7 @@ package br.com.sea.tecnologia.desafioBackend.domain.user.dto;
 
 import br.com.sea.tecnologia.desafioBackend.domain.user.entities.User;
 import jakarta.validation.Valid;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Pattern;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -30,16 +28,19 @@ public class UserDto {
      private String password;
 
      @Valid
+     @NotNull(message = "O endereço é obrigatório.")
      private AddressDto address;
 
      @Valid
+     @NotEmpty(message = "Deve ter pelo menos 1 telefone")
      private Set<PhoneDto> phones = new HashSet<>();
 
      @Valid
+     @NotEmpty(message = "Deve ter pelo menos 1 email")
      private Set<EmailDto> emails = new HashSet<>();
 
+     @NotEmpty(message = "Deve ter pelo menos 1 role")
      private Set<RoleDto> roles = new HashSet<>();
-
 
      public UserDto() {
      }

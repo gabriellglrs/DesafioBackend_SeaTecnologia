@@ -7,6 +7,7 @@ import jakarta.validation.constraints.Size;
 
 public class AddressDto {
      private Long id;
+
      @NotBlank(message = "O CEP é obrigatório.")
      @Pattern(regexp = "^[0-9]{5}-[0-9]{3}$", message = "O CEP deve ser no formato 00000-000.")
      private String cep;
